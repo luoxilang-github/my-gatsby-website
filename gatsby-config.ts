@@ -15,30 +15,30 @@ const config: GatsbyConfig = {
       "icon": "src/images/icon.png"
     }
   }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
-    },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "blog",
-      "path": `${__dirname}/blog`
-    },
-    __key: "pages"
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "./src/images/"
+      },
+      __key: "images"
     }, {
-    resolve: `gatsby-plugin-less`,
-    options: {
-      lessOptions: {
-        strictMath: true,
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "blog",
+        "path": `${__dirname}/blog`
       },
-      cssLoaderOptions: {
-        camelCase: false,
-      },
-    }
-  }]
+      __key: "pages"
+    }, {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        lessOptions: {
+          strictMath: true,
+        },
+        cssLoaderOptions: {
+          camelCase: false,
+        },
+      }
+    }]
 };
 
 export default config;
